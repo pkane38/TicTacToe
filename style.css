@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #545454;
+    display: flex;
+    font-family: monospace; /*maybe change this?*/
+    justify-content: center;
+}
+.container {
+    background: #14BDAC; /*maybe change this?*/
+    margin: 45px;
+    padding: 45px;
+    border-radius: 25px;
+}
+.title {
+    text-align: center;
+}
+ .title span {
+     columns: #F2EBD3;
+ }
+.status-action {
+    display: flex;
+    margin-top: 10px;
+    font-size: 40px;
+    justify-content: space-between;
+    height: 30px;
+}
+.status span {
+    color: #F2EBD3;
+  }
+.reset {
+    cursor: pointer;
+    font-size: 35px;
+    align-items: center;   
+}
+.reset:hover {
+    color: blue;
+    font-weight: bolder; /*maybe change this?*/
+    text-decoration: underline;
+}
+.game-grid {
+    background-color: #0da192;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 15px;
+    margin-top: 60px;
+}
+.game-cell {
+    background: #14BDAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+}
+.x, 
+.o {
+    cursor: default;
+}
+.x::after {   /* can use after as well */
+    content: "×";
+    font-size: 200px;
+} 
+.o::after {
+    content: "○";
+    font-size: 200px;
+    color: #F2EBD3;
+}
+
+.won.x,
+.won.o::after {
+    color: #bd022f;
+}
+
